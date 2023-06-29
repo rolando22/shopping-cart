@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Products } from '../';
+import { Header, Products } from '../';
 
 import { products as initialProducts } from '../../mocks/products.json';
 
@@ -11,7 +11,7 @@ export function App() {
 
     return (
         <>
-            <h1>Shopping Cart</h1>
+            <Header />
             <Products products={products} />
         </>
     )
