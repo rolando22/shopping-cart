@@ -1,0 +1,13 @@
+.Filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.Filters-item {
+    display: flex;
+    gap: 20px;
+}
