@@ -10,13 +10,13 @@ import './App.css';
 
 export function App() {
     const [products, setProducts] = useState(initialProducts);
-    const { setFilters, filterProducts } = useFilters();
+    const { filterProducts } = useFilters();
 
     const filtedProducts = filterProducts({ products });
 
     return (
         <>
-            <Header changeFilters={setFilters}/>
+            <Header/>
             <Products products={filtedProducts} />
         </>
     )
