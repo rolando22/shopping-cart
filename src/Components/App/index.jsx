@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Header, Products } from '../';
+import { Cart, Header, Products } from '../';
 
 import { useFilters } from './../../hooks/useFilters';
 
@@ -17,6 +17,7 @@ export function App() {
     return (
         <>
             <Header/>
+            <Cart />
             <Products products={filtedProducts} />
         </>
     )
