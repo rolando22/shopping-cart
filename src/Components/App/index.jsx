@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { Cart, Header, Products } from '../';
 
+import { CartProvider } from './../../contexts/cart';
+
 import { useFilters } from './../../hooks/useFilters';
 
 import { products as initialProducts } from '../../mocks/products.json';
@@ -15,10 +17,10 @@ export function App() {
     const filtedProducts = filterProducts({ products });
 
     return (
-        <>
+        <CartProvider>
             <Header/>
             <Cart />
             <Products products={filtedProducts} />
-        </>
+        </CartProvider>
     )
 }

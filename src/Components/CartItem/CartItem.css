@@ -1,0 +1,21 @@
+.CartItem {
+    border-bottom: 1px solid #444;
+    padding-bottom: 16px;
+}
+
+.CartItem-img {
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+.CartItem-footer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.CartItem-footer-add, 
+.CartItem-footer-remove {
+    padding: 8px;
+}

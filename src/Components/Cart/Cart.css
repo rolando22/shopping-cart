@@ -8,27 +8,6 @@
     top: 0;
 }
 
-.Cart-item-img {
-    aspect-ratio: 16/9;
-    width: 100%;
-}
-
-.Cart-item {
-    border-bottom: 1px solid #444;
-    padding-bottom: 16px;
-}
-
-.Cart-footer {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-}
-
-.Cart-footer-add {
-    padding: 8px;
-}
-
 .Cart-button {
     width: 32px;
     height: 32px;
