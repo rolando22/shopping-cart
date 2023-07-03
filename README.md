@@ -11,8 +11,9 @@ Este repositorio contiene el código de una aplicación de una tienda online, po
 - Uso de customHooks:
     - Para el manejo del contexto del carrito y los filtros.
     - Para manjear el reducer del carrito.
+- Persistencia de datos del carrito con LocalStorage.
 
-Puedes ver el demo aquí: ().
+Puedes ver el demo aquí: (https://rolando22.github.io/shopping-cart/).
 
 # Prueba técnica para Juniors con React. Enunciado
 
