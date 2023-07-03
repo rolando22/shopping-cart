@@ -3,7 +3,7 @@ import { Filters } from './../';
 export function Header() {
     return (
         <>
-            <h1>Shopping Cart</h1>
+            <h1>React Shop 🛒</h1>
             <Filters />
         </>
     );
