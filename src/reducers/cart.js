@@ -1,4 +1,4 @@
-export const cartInitialState = [];
+export const cartInitialState = JSON.parse(localStorage.getItem('cart')) || [];
 
 export const cartTypesActions = {
     addToCart: 'ADD_TO_CART',
@@ -7,12 +7,15 @@ export const cartTypesActions = {
     clearCart: 'CLEAR_CART',
 };
 
+const saveLocalStorage = state => localStorage.setItem('cart', JSON.stringify(state));
+
 const cartReducerObject = (state, payload) => ({
     [cartTypesActions.addToCart]: () => {
         const productCartIndex = state.findIndex(item => item.id === payload.id);
         if (productCartIndex >= 0) {
             const newState = structuredClone(state);
             newState[productCartIndex].quantity += 1;
+            saveLocalStorage(newState);
             return newState;
         }
         const newState = [
@@ -22,6 +25,7 @@ const cartReducerObject = (state, payload) => ({
                 quantity: 1,
             }
         ];
+        saveLocalStorage(newState);
         return newState;
     },
     [cartTypesActions.removeQuantityFromCart]: () => {
@@ -30,13 +34,18 @@ const cartReducerObject = (state, payload) => ({
             return cartReducerObject(state, payload.id)[cartTypesActions.removeFromCart]();
         const newState = structuredClone(state);
         newState[productCartIndex].quantity -= 1;
+        saveLocalStorage(newState);
         return newState;
     },
     [cartTypesActions.removeFromCart]: () => {
         const newState = state.filter(item => item.id !== payload);
+        saveLocalStorage(newState);
         return newState;
     },
-    [cartTypesActions.clearCart]: () => [],
+    [cartTypesActions.clearCart]: () => {
+        saveLocalStorage([]);
+        return [];
+    },
 });
 
 export const cartReducer = (state, action) => {
