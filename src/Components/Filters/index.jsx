@@ -8,6 +8,10 @@ const categories = [
     { id: 0, value: 'all', text: 'Todas' },
     { id: 1, value: 'laptops', text: 'Pórtatiles' },
     { id: 2, value: 'smartphones', text: 'Celulares' },
+    { id: 3, value: 'home-decoration', text: 'Decoración Hogareña' },
+    { id: 4, value: 'fragrances', text: 'Fragancias' },
+    { id: 5, value: 'skincare', text: 'Protector de Piel' },
+    { id: 6, value: 'groceries', text: 'Comestibles' },
 ];
 
 export function Filters() {
