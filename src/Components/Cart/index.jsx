@@ -14,6 +14,8 @@ export function Cart() {
     const handleRemoveFromCart = (item) => () => removeQuantityFromCart(item);
     const handleOnClickClearCart = () => clearCart();
 
+    const cartTotal = cart.reduce((subTotal, item) => subTotal + item.price * item.quantity, 0)
+
     return (
         <>
             <label 
@@ -41,7 +43,8 @@ export function Cart() {
                         />
                     )}
                 </ul>
-                <button onClick={handleOnClickClearCart}>
+                <strong>Total -</strong> ${cartTotal}
+                <button className='Cart-button-clear' onClick={handleOnClickClearCart}>
                     <ClearCartIcon />
                 </button>
             </aside>

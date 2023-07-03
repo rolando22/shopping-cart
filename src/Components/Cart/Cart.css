@@ -49,3 +49,8 @@
     height: 93vh;
     display: block;
 }
+
+.Cart-button-clear {
+    display: block;
+    margin: 20px auto 0;
+}
