@@ -11,3 +11,19 @@
     display: flex;
     gap: 20px;
 }
+
+@media (max-width: 600px) {
+    
+    .Filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Filters-item input {
+        width: 110px;
+    }
+
+    .Filters-item span {
+        width: 41px;
+    }
+}

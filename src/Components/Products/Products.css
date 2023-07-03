@@ -15,6 +15,7 @@
 .Products-item {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -33,10 +34,11 @@
 }
 
 .Products-item-img {
-    border-radius: 4px;
     width: 100%;
-    aspect-ratio: 16/9;
+    height: 120px;
     display: block;
-    object-fit: cover;
+    aspect-ratio: 16/9;
     background: #fff;
+    border-radius: 4px;
+    object-fit: cover;
 }

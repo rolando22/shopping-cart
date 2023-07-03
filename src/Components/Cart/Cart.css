@@ -6,6 +6,22 @@
     position: fixed;
     right: 0;
     top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.Cart::-webkit-scrollbar {
+	width: 0.3rem;
+}
+
+.Cart::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 1rem;
+}
+
+.Cart::-webkit-scrollbar-thumb {
+    background-color: #09f;
+    border-radius: 20px;
 }
 
 .Cart-button {
@@ -30,6 +46,6 @@
 }
 
 .Cart-button ~ input:checked ~ .Cart {
-    height: 100%;
+    height: 93vh;
     display: block;
 }
